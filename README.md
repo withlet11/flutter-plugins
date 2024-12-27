@@ -1,3 +1,11 @@
+# Withlet11 Flutter plugins
+
+This project is forked from [cph-cachet/flutter-plugins](https://github.com/cph-cachet/flutter-plugins). 'light' plugin for Android only is being maintained to solve future issues.
+
+The following is README of the original project
+
+---
+
 # CACHET Flutter plugins
 
 This repo contains the source code for Flutter first-party plugins developed by developers at the [Copenhagen Center for Health Technology (CACHET)](http://www.cachet.dk/) at The Technical University of Denmark.
