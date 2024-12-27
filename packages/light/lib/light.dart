@@ -1,3 +1,12 @@
+/*
+ * light.dart
+ *
+ * Copyright 2018 Copenhagen Center for Health Technology (CACHET)
+ *   at the Technical University of Denmark (DTU).
+ * https://github.com/cph-cachet/flutter-plugins/tree/master/packages/light
+ *
+ */
+
 import 'dart:async';
 
 import 'package:flutter/services.dart';
@@ -15,7 +24,7 @@ class LightException implements Exception {
 class Light {
   static Light? _singleton;
   static const EventChannel _eventChannel =
-      const EventChannel("light.eventChannel");
+  EventChannel("light.eventChannel");
 
   /// Constructs a singleton instance of [Light].
   ///
@@ -29,8 +38,9 @@ class Light {
   /// The stream of light events.
   /// Throws a [LightException] if device isn't on Android.
   Stream<int> get lightSensorStream {
-    if (!Platform.isAndroid)
+    if (!Platform.isAndroid) {
       throw LightException('Light sensor API only available on Android.');
+    }
 
     return _lightSensorStream ??=
         _eventChannel.receiveBroadcastStream().map((lux) => lux);

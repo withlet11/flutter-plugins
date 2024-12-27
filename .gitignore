@@ -9,6 +9,8 @@
 .buildlog/
 .history
 .svn/
+.swiftpm/
+migrate_working_dir/
 
 # IntelliJ related
 *.iml
@@ -45,6 +47,7 @@ analysis_benchmark.json
 .packages.generated
 
 # Flutter/Dart/Pub related
+/pubspec.lock
 **/doc/api/
 .dart_tool/
 .flutter-plugins
